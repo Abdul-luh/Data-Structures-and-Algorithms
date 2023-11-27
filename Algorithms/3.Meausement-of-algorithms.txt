@@ -1,0 +1,25 @@
+Algorithm Analysis
+There are multiple ways to solve a problem
+example: there are multiple ways to sort a list of numbers
+-How do we analyse which one of them is the most efficient?
+
+Factor that affect run time of an algorithm
+- Programming Language Used
+- computer the program runs on 
+- other programs running at the same time 
+- Quality of the operating system
+etc
+
+We evaluate the performance of an algorithm in terms of  its input size
+
+Time complexcity - amount of time taken by an algorithm to run, as a function of input size
+space complexcity - amount of space taken by an algorithm to run, as a function of input size
+
+How to represent complexcity
+Asymptotic Notation are 
+- Mathemeatical tools are used to represent time  complexity
+
+types of Asymptotic Notation
+1. Big-O Notation(O-notation) - worse case complexcity
+2. Omega Notation (-notation) - best cast complexity
+3. Theta Notation(-notation)  - Average case complexcity

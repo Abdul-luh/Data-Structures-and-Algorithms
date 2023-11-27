@@ -1,0 +1,13 @@
+// SEARCH ALGORITHMS
+
+This section deals with 
+Linear search 
+Binary search
+- Recursive Binary search
+
+The approach
+
+- Problem Statement
+- Pause the video and try solve the Problem
+- Implement the solution
+- Determine the  Big-O time complexity

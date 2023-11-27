@@ -1,0 +1,110 @@
+Big-O Notation
+
+Big-O notation describes the complextity of an algorithm using algebraic terms
+It has two important characteristics
+- it is expressed in terms of the input
+- if focuses on the bigger picture without getting caught up in the minute details
+
+
+Big-O Time complexcity
+using the javaScript summation 
+
+function summation(n) {
+    let sum = 0                     // execution statement (1)
+    for (let i = 1; i <= n; i++){
+        sum += 1;                   // execution statement (4) in this case
+    }
+    return sum                      // execution statement (1)
+}
+
+summation(4) = 10
+1 + 2 + 3 + 4 = 10 
+
+therefore 1 + 4 + 1 =6
+we can say (n + 2) 4+2 = 6
+
+time complexcity O(n) - linear
+
+bottom line is Big-O is expressed in terms of the input
+
+
+IT FOCUSES OF ON THE BIGGER PICTURE WITHOUT GETTING CAUGHT UP IN THE MINUTE DETAILS
+
+ n + 2      =>  n
+ n = 100    => 100 + 2
+ n = 1000   => 1000 + 2
+ n = 10000  => 10000 + 2
+ .
+ .
+ .
+ n = 100000000 => 100000000 + 2
+
+eventually the "+2" becomes increasingly insignificant protraying the bigger picture and not getting caughtup in a minute detail
+
+function summation(n){
+    retrun ( n * (n+1)) / 2;
+}
+
+Time complexcity O(1) - Constant
+
+
+If you have two nested loops the Big-O will be called Cubic
+
+function quadratic(n) {
+	for (let i = 1; i <= n; i++)
+		for (let j = 1; j <= i; j++) {
+			// some code
+		}
+}
+
+quadratic(4);
+
+if you calculate the complexcity to be 3n + 5n + 2
+the Big-O will be = O(n2) - Quadratic
+
+
+
+If you have two nested loops the Big-O will be called Cubic
+
+function cubic(n) {
+	for (let i = 1; i <= n; i++)
+		for (let j = 1; j <= i; j++) {
+			// some code
+		}
+}
+
+cubic(4);
+
+here the Big-O will be call cubic
+
+
+If input size reduces by half every iteration it is Logarithmic
+
+O(logn) - Logarithmic
+
+
+
+
+
+    SPACE COMPLEXCITY
+O(1) - Constant  // if the algorithm does not need extra memory but the memory needed does not depend of the input size
+O(n) - Linear // the space needed grows as the input size grows
+O(logn) - Logarithmic // the space needed grows but not as the input size grows
+
+
+
+NOTE: Always try to avoid quadratic time and space complexcities
+
+
+Big-O trend
+
+O(1) Constant is very good
+O(logn) Logarithmic is very good
+O(n) Linear is fair
+O(n logn) Linear and Logarithmic is bad
+O(n^2) Quadratic is very bad
+O(2^n) Quadratic is very bad
+O(n!) factorial is very bad
+
+
+

@@ -1,0 +1,16 @@
+// Math Algoithms
+/*
+ Fibonacci sequence 
+ Factorial of a number
+ Prime number
+ Power of two
+ */
+// Recursion
+
+
+// THE APPROACH 
+
+-   Problem statement
+-   Pause the video and try solving the problem
+-   Implement the solution together
+-   Determine the Big-O of the solution

@@ -1,0 +1,32 @@
+// SORTING ALGORITHMS
+
+/**
+    Sorting algorithms are very important in web development
+    the four Sorting algorithms we'll be working on in this course are:
+    >> Bubble Sort
+    >> Insertion Sort
+    >> Quick Sort
+    >> Merge Sort
+
+    Other Types of sorting includes:
+    >> Selection Sort
+    >> Heap Sort
+    >> Radix Sort
+    >> Counting Sort
+    >> Bucket Sort
+    >> Shell Sort
+    >> Tim Sort
+    >> Cycle Sort
+    >> Comb Sort
+    >> Gnome Sort
+    >> Pancake Sort
+    >> Pigeonhole Sort
+
+    THE APPROACH
+    
+    - Problem Statement
+    - pause the video and try solve the problem
+    - implement the solution together
+    - Determine the Big-O
+    
+ */

@@ -1,0 +1,6 @@
+MISCELLINEOUS PROBLEMS
+
+- Cartesian product
+- Climbing Staircase 
+- Tower of Hanoi
+

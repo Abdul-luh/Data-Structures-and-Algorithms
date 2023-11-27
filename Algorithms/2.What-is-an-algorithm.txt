@@ -1,0 +1,42 @@
+An algorithm is a set of well-defined instructions to solve a particular problem
+
+// example
+
+Ingredients -> Recipe -> Tasty Dish
+
+// cooking noodles
+
+cup of noodles      1. Boil Water                   
+Taste Maker     ->  2. pour water into cup      ->  Tasty noodles
+water               3. Add taste Maker
+                    4. close lid and wait 
+                    
+algorithms are is the same order
+Input -> algorithm -> Output
+
+
+    <Programming>
+Algorithm to add two numbers
+
+Remember!
+Input -> algorithm -> Output
+
+in this case
+Input       ->  algorithm               ->  Output
+    |               |                           |
+Two numbers     1. Add numbers using +      sum of a and b
+a and b         2. return the value
+
+
+    CHARACTERISTICS OF AN ALGORITHM
+1. Well defined inputs and outputs
+2. Each Step should b e clear and unambiguous
+3. Language independent
+
+
+Why should your learn about algorithms
+
+1. Solving problems as a developer
+2. learning different techniques to efficiently sovling a problem
+3. one problem can be solved in many different ways using differen algorithms
+4. Every allgorithm comes with its own tradeoffs when it comes to performance.
