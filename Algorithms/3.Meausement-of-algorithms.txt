@@ -17,9 +17,9 @@ space complexcity - amount of space taken by an algorithm to run, as a function 
 
 How to represent complexcity
 Asymptotic Notation are 
-- Mathemeatical tools are used to represent time  complexity
+- Mathemeatical tools are used to represent time complexity
 
 types of Asymptotic Notation
 1. Big-O Notation(O-notation) - worse case complexcity
-2. Omega Notation (-notation) - best cast complexity
-3. Theta Notation(-notation)  - Average case complexcity
+2. Omega Notation (Ω-notation) - best cast complexity
+3. Theta Notation(θ-notation)  - Average case complexcity

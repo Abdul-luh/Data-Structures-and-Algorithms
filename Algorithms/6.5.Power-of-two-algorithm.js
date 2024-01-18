@@ -42,7 +42,7 @@ function isPowerOfTwo(n) {
 
 function isPowerOfTwoBitWise(n) {
 	if (n < 1) return false;
-	return (n & (n - 1)) === 0; // using BITWISE operator the code is mouch smaller
+	return (n & (n - 1)) === 0; // using BITWISE operator the code is much smaller
 }
 
 // the solution is more optimal;

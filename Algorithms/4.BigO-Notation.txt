@@ -30,14 +30,14 @@ bottom line is Big-O is expressed in terms of the input
 
 IT FOCUSES OF ON THE BIGGER PICTURE WITHOUT GETTING CAUGHT UP IN THE MINUTE DETAILS
 
- n + 2      =>  n
- n = 100    => 100 + 2
- n = 1000   => 1000 + 2
- n = 10000  => 10000 + 2
+ n + 2      	=>  n
+ n = 100    	=> 100 + 2
+ n = 1000   	=> 1000 + 2
+ n = 10000  	=> 10000 + 2
  .
  .
  .
- n = 100000000 => 100000000 + 2
+ n = 100000000 	=> 100000000 + 2
 
 eventually the "+2" becomes increasingly insignificant protraying the bigger picture and not getting caughtup in a minute detail
 
@@ -95,16 +95,17 @@ O(logn) - Logarithmic // the space needed grows but not as the input size grows
 
 NOTE: Always try to avoid quadratic time and space complexcities
 
-
-Big-O trend
-
-O(1) Constant is very good
-O(logn) Logarithmic is very good
-O(n) Linear is fair
-O(n logn) Linear and Logarithmic is bad
-O(n^2) Quadratic is very bad
-O(2^n) Quadratic is very bad
-O(n!) factorial is very bad
+-------------------------------------------------
+Big-O Trend CheetSheet							|
+------------------------------------------------|
+O(1) Constant is very good						|
+O(logn) Logarithmic is very good				|
+O(n) Linear is fair								|
+O(n logn) Linear and Logarithmic is bad			|
+O(n^2) Quadratic is very bad					|
+O(2^n) Quadratic is very bad					|
+O(n!) factorial is very bad						|
+-------------------------------------------------
 
 
 

@@ -8,15 +8,17 @@
 
 function factorial(n) {
 	let product = 1;
-	for (let i = 1; i <= n; i++) {
+	for (let i = 2; i <= n; i++) {
 		product *= i;
 	}
 	return product;
 }
 
-console.log(factorial(0));
-console.log(factorial(4));
-console.log(factorial(5));
+// console.log(factorial(0));
+// console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(4)); // 24
+// console.log(factorial(5)); // 120
 
 // Big-O id O(n)
-// function execution
+// function execution = 2 + n

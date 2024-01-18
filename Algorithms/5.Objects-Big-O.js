@@ -14,6 +14,6 @@ const person = {
 // Object.entries() - O(n)
 
 console.log(person.firstName);
-// console.log(person.keys("firstName"));
-// console.log(person.values());
-// console.log(person.entries());
+console.log(person.keys("firstName"));
+console.log(person.values());
+console.log(person.entries());
