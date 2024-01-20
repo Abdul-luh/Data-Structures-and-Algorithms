@@ -18,3 +18,143 @@ GRAPHS
 PREREQUISITES
 MODERN JS
 JAVASCRIPT ALGORITHMS
+
+class CircularQue {
+	item: Record<number, string | number>;
+	front: number;
+	rear: number;
+	capacity: number;
+	currLen: number;
+	constructor(capacity: number) {
+		this.item = {};
+		this.capacity = capacity;
+		this.currLen = 0;
+		this.front = -1;
+		this.rear = -1;
+	}
+	isFull(): boolean {
+		return this.currLen === this.capacity;
+	}
+	isEmpty(): boolean {
+		return this.currLen === 0;
+	}
+	enqueue(element: string | number):
+		| string
+		| {
+				currLen: number;
+				index: number;
+				insertedValue: string | number;
+		  } {
+		if (this.isFull()) return "Full";
+		this.rear += 1 % this.capacity;
+		this.item[this.rear] = element;
+		this.currLen++;
+		if (this.front === -1) this.front = this.rear;
+
+		const res = {
+			currLen: this.currLen,
+			,
+		};
+
+		return res;
+	}
+
+	dequeue(): string | { deletedItem: number | string } {
+		if (this.isEmpty()) return "Empty!";
+		const deletedItem = this.item[this.front];
+		delete this.item[this.front];
+		this.front = (this.front + 1) % this.capacity;
+		this.currLen--;
+		if (this.isEmpty()) {
+			this.front = this.rear = -1;
+		}
+		const res = { deletedItem };
+		return res;
+	}
+
+	peek(): string | { oldestItem: number | string } {
+		if (this.isEmpty()) return "Empty!";
+		const res = { oldestItem: this.item[this.front] };
+		return res;
+	}
+
+	size(): number {
+		return this.rear - this.front;
+	}
+
+	print(): void {
+		if (this.isEmpty()) return console.log("Empty!");
+		// for (let i = this.front; i <= this.rear; i++) {
+		// 	console.log(this.item[i]);
+		// }
+		console.log(this.item);
+	}
+}
+
+class Nodes {
+	value: Nodes | number | string | null;
+	next: Nodes | number | string | null;
+	constructor(value: string | number) {
+		this.value = value;
+		this.next = null;
+	}
+}
+
+class LinkedList {
+	head: Nodes | null;
+	size: number;
+	constructor() {
+		this.head = null;
+		this.size = 0;
+	}
+
+	isEmpty() {
+		return this.size === 0;
+	}
+
+	getSize() {
+		return this.size;
+	}
+
+	prepend(value: number | string) {
+		const node = new Nodes(value);
+		if (this.isEmpty()) {
+			this.head = node;
+		} else {
+			node.next = this.head;
+			this.head = node;
+		}
+		this.size++;
+		return this.head;
+	}
+
+	append(value: string | number) {
+		const node = new Nodes(value);
+		let prev = this.head;
+
+		if (this.isEmpty()) {
+			prev = node;
+		} else {
+			while (prev?.next) prev = prev.next;
+			prev ? (prev.next = node) : (this.head = node);
+		}
+		this.size++;
+		return prev;
+	}
+
+	print() {
+		if (this.isEmpty()) {
+			console.log("Empty List!");
+			return "Empty List!";
+		} else {
+			let curr = this.head;
+			let listValue = "";
+			while (curr) {
+				listValue += `${curr.value} `;
+				curr = curr.next;
+			}
+			console.log(listValue);
+			return listValue;
+		}
+	}
+}
