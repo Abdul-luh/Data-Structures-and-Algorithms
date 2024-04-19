@@ -59,7 +59,6 @@ class LinkedList {
 		if (index > 0) {
 			const node = new Nodes(value);
 			let prev = this.head;
-			let currIndex = 0;
 			if (this.isEmpty()) prev = node;
 			else {
 				for (let i = 0; i < index - 1; i++) {
@@ -71,6 +70,7 @@ class LinkedList {
 					this.size++;
 				}
 			}
+			return prev;
 		}
 	}
 
@@ -102,3 +102,13 @@ console.log("\n ---------------------------------------------\n");
 console.log("append ", list.append(30));
 console.log("append ", list.append(40));
 console.log("Print ", list.print());
+console.log("\n ---------------------------------------------\n");
+console.log("insert(50, 0)");
+list.insert(50, 0);
+console.log("Print ", list.print());
+console.log("List size is: ", list.getSize());
+console.log("\n ---------------------------------------------\n");
+console.log("insert(60, 3)");
+list.insert(60, 3);
+console.log("Print ", list.print());
+console.log("List size is: ", list.getSize());
