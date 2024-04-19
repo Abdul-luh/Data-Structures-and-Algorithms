@@ -23,34 +23,28 @@
 */
 
 class Queue {
+	items: Array<string | number>;
 	constructor() {
-		this.item = [];
+		this.items = [];
 	}
-	enqueue(element) {
-		return this.item.push(element);
+	enqueue(element: string | number) {
+		this.items.push(element);
 	}
-
 	dequeue() {
-		return this.item.shift();
+		return this.items.unshift();
 	}
-
-	peek() {
-		if (!this.isEmpty()) {
-			return this.item[0];
-		}
-		return "Empty!";
-	}
-
 	isEmpty() {
-		return this.item.length === 0;
+		return this.items.length === 0;
 	}
-
 	size() {
-		return this.item.length;
+		return this.items.length;
 	}
-
+	peek() {
+		if (this.isEmpty()) return "empty";
+		return this.items[0];
+	}
 	print() {
-		console.log(this.item.toString());
+		console.log(this.items.toString());
 	}
 }
 

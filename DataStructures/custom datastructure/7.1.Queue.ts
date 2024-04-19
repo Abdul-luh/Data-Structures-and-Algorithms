@@ -1,3 +1,5 @@
+// This is a much better and efficient way to achieve a queue data structure
+
 class Que {
 	rear: number;
 	front: number;

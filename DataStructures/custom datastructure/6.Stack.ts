@@ -34,7 +34,11 @@ class Stack {
 		return this.items.pop();
 	}
 	peek() {
+		if (this.empty()) return "empty";
 		return this.items[this.items.length - 1];
+	}
+	empty() {
+		return this.items.length === 0;
 	}
 	size() {
 		return this.items.length;
