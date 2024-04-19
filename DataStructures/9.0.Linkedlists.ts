@@ -74,6 +74,25 @@ class LinkedList {
 		}
 	}
 
+	removeFrom(index: number) {
+		if (index < 0 || index > this.size) return null;
+		let removedNode: Nodes | null;
+		if (index === 0) {
+			removedNode = this.head;
+			this.head = this.head?.next || null;
+			this.size--;
+			return removedNode?.value;
+		} else {
+			let prev = this.head;
+			for (let i = 0; i > index - 1; i++) {
+				prev = prev?.next || null;
+			}
+			removedNode = prev?.next || null;
+		}
+		this.size--;
+		return removedNode;
+	}
+
 	print() {
 		if (this.isEmpty()) {
 			console.log("Empty List!");
@@ -110,5 +129,9 @@ console.log("List size is: ", list.getSize());
 console.log("\n ---------------------------------------------\n");
 console.log("insert(60, 3)");
 list.insert(60, 3);
+console.log("Print ", list.print());
+console.log("List size is: ", list.getSize());
+console.log("\n ---------------------------------------------\n");
+console.log("remove", list.removeFrom(3));
 console.log("Print ", list.print());
 console.log("List size is: ", list.getSize());
