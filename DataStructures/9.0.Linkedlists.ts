@@ -16,7 +16,7 @@ class LinkedList {
 	}
 
 	isEmpty() {
-		return this.size === 0;
+		return this.size === 0 && this.head !== null;
 	}
 
 	getSize() {
@@ -49,6 +49,29 @@ class LinkedList {
 		}
 		this.size++;
 		return prev;
+	}
+
+	insert(value: string | number, index: number) {
+		if (index < 0 || index > this.size) return "Invalid Index";
+		if (index === 0) this.prepend(value);
+		if (index === this.size) this.append(value);
+
+		if (index > 0) {
+			const node = new Nodes(value);
+			let prev = this.head;
+			let currIndex = 0;
+			if (this.isEmpty()) prev = node;
+			else {
+				for (let i = 0; i < index - 1; i++) {
+					prev = prev ? prev.next : this.head;
+				}
+				if (prev) {
+					node.next = prev.next;
+					prev.next = node;
+					this.size++;
+				}
+			}
+		}
 	}
 
 	print() {
