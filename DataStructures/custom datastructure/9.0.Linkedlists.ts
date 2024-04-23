@@ -88,7 +88,7 @@ class LinkedList {
 				prev = prev?.next || null;
 			}
 			removedNode = prev?.next || null;
-			prev?.next = removedNode?.next || null;
+			prev !== null ? (prev.next = removedNode?.next || null) : (prev = null);
 		}
 		this.size--;
 		return removedNode?.value;

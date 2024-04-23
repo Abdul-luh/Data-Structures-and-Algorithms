@@ -158,3 +158,8 @@ class LinkedList {
 		}
 	}
 }
+
+go through 
+	queue 7.1
+	CircularQue
+	LinkedList
