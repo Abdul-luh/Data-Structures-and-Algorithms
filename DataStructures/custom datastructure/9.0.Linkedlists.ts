@@ -80,7 +80,7 @@ class LinkedList {
 		if (index === 0) {
 			removedNode = this.head;
 			this.head = this.head?.next || null;
-			this.size--;
+			this.size--;	
 			return removedNode?.value;
 		} else {
 			let prev = this.head;

@@ -27,23 +27,23 @@ class Queue {
 	constructor() {
 		this.items = [];
 	}
-	enqueue(element: string | number) {
-		this.items.push(element);
+	enqueue(element: string | number): number {
+		return this.items.push(element);
 	}
-	dequeue() {
+	dequeue(): number {
 		return this.items.unshift();
 	}
-	isEmpty() {
+	isEmpty(): boolean {
 		return this.items.length === 0;
 	}
-	size() {
+	size(): number {
 		return this.items.length;
 	}
-	peek() {
+	peek(): number | string {
 		if (this.isEmpty()) return "empty";
 		return this.items[0];
 	}
-	print() {
+	print(): void {
 		console.log(this.items.toString());
 	}
 }

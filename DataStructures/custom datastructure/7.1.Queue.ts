@@ -1,70 +1,61 @@
 // This is a much better and efficient way to achieve a queue data structure
-
+type ItemType = Record<number, string | number>;
 class Que {
-	rear: number;
-	front: number;
-	items: Record<number, string | number>;
-
+	private items: ItemType;
+	private front: number;
+	private rear: number;
 	constructor() {
 		this.items = {};
-		this.rear = 0;
 		this.front = 0;
+		this.rear = 0;
 	}
-
-	enqueue(element: string | number): void {
-		this.items[this.rear] = element;
-		this.rear++;
-	}
-
-	dequeue(): string | number | undefined {
-		if (this.isEmpty()) {
-			return undefined;
-		}
-		const deletedItem = this.items[this.front];
-		delete this.items[this.front];
-		this.front++;
-		return deletedItem;
-	}
-
 	isEmpty(): boolean {
 		return this.rear - this.front === 0;
 	}
-
 	peek(): string | number {
-		if (!this.isEmpty()) {
+		if (!this.isEmpty) {
 			return this.items[this.front];
 		}
-		return "Empty!";
+		return "Empty";
 	}
-
 	size(): number {
 		return this.rear - this.front;
 	}
-
-	print(): void {
+	enqueue(val: number | string): string {
+		this.items[this.rear] = val;
+		this.rear++;
+		return `{'${this.rear - 1}': ${val}}`;
+	}
+	dequeue() {
+		const unshiftedItem = this.items[this.front];
+		delete this.items[this.front];
+		this.front++;
+		return unshiftedItem;
+	}
+	print() {
 		console.log(this.items);
 	}
 }
 
-let myQueue = new Que();
+let myQue = new Que();
 
-console.log(myQueue.isEmpty());
-console.log(myQueue.peek());
-console.log(myQueue.size());
+console.log(myQue.isEmpty());
+console.log(myQue.peek());
+console.log(myQue.size());
 
-myQueue.enqueue("hello");
-myQueue.enqueue("world");
-myQueue.enqueue(1);
-myQueue.enqueue(2);
-myQueue.enqueue(3);
+console.log(myQue.enqueue("hello"));
+console.log(myQue.enqueue("world"));
+console.log(myQue.enqueue(1));
+console.log(myQue.enqueue(2));
+console.log(myQue.enqueue(3));
 
-console.log(myQueue.size());
+console.log(myQue.size());
 
-myQueue.print();
+myQue.print();
 
-myQueue.dequeue();
+console.log(myQue.dequeue());
 
-myQueue.print();
+myQue.print();
 
-console.log(myQueue.isEmpty());
-console.log(myQueue.peek());
+console.log(myQue.isEmpty());
+console.log(myQue.peek());
