@@ -33,7 +33,7 @@ function binarySearch(arr, t) {
 
 		if (t === arr[middleIndex]) return middleIndex;
 
-		if (t < middleIndex) {
+		if (t < arr[middleIndex]) {
 			rightIndex = middleIndex - 1;
 		} else {
 			leftIndex = middleIndex + 1;

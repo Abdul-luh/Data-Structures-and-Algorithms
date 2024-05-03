@@ -50,7 +50,6 @@ console.log("Numbers array is ascending order: " + quickSortAsc(arrNums));
 function quickSortDesc(arr) {
 	if (arr.length < 2) return arr;
 	let pivot = Math.floor(arr.length / 2);
-	// let pivot = arr[arr.length - 1];
 	let right = [];
 	let left = [];
 

@@ -24,10 +24,6 @@ function mergeSortAsc(arr) {
 
 	let mid = Math.floor(arr.length / 2);
 	let leftArr = arr.slice(0, mid);
-
-	// from the middle to the end
-	// let rightArr = arr.slice(mid, arr.length);
-	// alternatively:
 	let rightArr = arr.slice(mid);
 
 	return merge(mergeSortAsc(leftArr), mergeSortAsc(rightArr));
