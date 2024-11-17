@@ -57,8 +57,10 @@ class CircularQue {
 		return { deletedItem };
 	}
 
-	print(): void {
-		console.log(this.isEmpty() ? null : this.items);
+	print() {
+		const returnValue = this.isEmpty() ? null : this.items
+		console.log(returnValue);
+		return returnValue;
 	}
 }
 
@@ -81,3 +83,4 @@ console.log(que.peek());
 console.log(que.enqueue("five"));
 console.log(que.enqueue("six"));
 console.log(que.enqueue("seven"));
+ 
