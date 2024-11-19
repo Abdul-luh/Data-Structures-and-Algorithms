@@ -47,10 +47,11 @@ class Hashtables {
 	}
 
 	display() {
-		let allItems: Array<string> = [];
+		let allItems;
 		for (let i = 0; i <= this.size; i++) {
 			if (this.table[i]) {
-				allItems = [...allItems, [i, this.table[i]]];
+				const value = [i, this.table[i]];
+				allItems.push(value);
 			}
 		}
 		return allItems;
